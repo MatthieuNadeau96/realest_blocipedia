@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   get 'about' => 'welcome#about'
   
-  root 'welcome#index'
+  root 'wikis#index'
 
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.

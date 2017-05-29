@@ -5,12 +5,14 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-require 'random_data'
+# require 'random_data'
+require 'faker'
+include Faker
 
-20.times do 
+5.times do 
     Wiki.create!(
-        title: RandomData.random_sentence,
-        body: RandomData.random_paragraph
+        title: Faker::Lorem.word,
+        body: Faker::Lorem.paragraph
     )
 end
 wiki = Wiki.all

@@ -1,6 +1,6 @@
 class WikisController < ApplicationController
   before_action :require_sign_in, except: [:index, :show]
-  before_action :authorize_user, except: [:index, :show, :new]
+  before_action :authorize_user, except: [:index, :show, :new, :create]
   
   def authorize_user
     unless current_user.admin?
