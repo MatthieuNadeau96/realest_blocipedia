@@ -58,4 +58,6 @@ end
 
 gem 'bootstrap-sass'
 
+gem 'pundit'
+
 
